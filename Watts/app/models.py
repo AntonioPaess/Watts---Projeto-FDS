@@ -1,7 +1,7 @@
 from django.db import models
 from decimal import Decimal, ROUND_HALF_UP
 
-COST_PER_KWH = Decimal('0.257')  # Defina o custo por kWh como Decimal
+
 
 class Locacao(models.Model):
     estado = models.CharField(max_length=50)
