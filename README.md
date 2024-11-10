@@ -12,30 +12,59 @@
 - Previsão da conta de luz ao final do mês com base no consumo atual.
 - Relatórios detalhados sobre o uso de energia.
 
-## Tecnologias Utilizadas
+## 💻 Tecnologias Utilizadas
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Javascript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)
+![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![DbSqlite](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)
+<br>
+![Tailwind](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Jira](https://img.shields.io/badge/Jira-0052CC?style=for-the-badge&logo=jira&logoColor=white)
+![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
+![Azure](https://img.shields.io/badge/Microsoft_Azure-0089D6?style=for-the-badge&logo=microsoft-azure&logoColor=white)
+![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
 
-- **Linguagem**: Python
-- **Framework Web**: Django
-- **Banco de Dados**: PostgreSQL
-- **Frontend**: HTML, CSS, JavaScript (opcional)
-- **APIs Externas**: Integração com APIs de provedores de energia (se aplicável) para obter tarifas dinâmicas.
+## 📦 Entregas
 
-
-## Backlog
-
-### Entrega 01:
+<details>
+<summary>Entrega 1</summary>
+<ul>
 
 - [Figma](https://www.figma.com/deck/UeRrQtq7oO5bvOHLTrm6hx/Untitled?node-id=2-34&node-type=CANVAS&t=gHFFUu4wcFKCrono-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1)
 - [Screen Cast](https://youtu.be/hQVwT0_B4r4?feature=shared) 
 - [Quadro Jira](https://watts-projeto-fds.atlassian.net/jira/software/projects/KAN/boards/1?atlOrigin=eyJpIjoiMjA4MjU4ZGQ3NmZiNDI4NmE2NjllZjk5NTNmYzk1ODgiLCJwIjoiaiJ9)
 - [Backlog Jira](https://watts-projeto-fds.atlassian.net/jira/software/projects/KAN/boards/1/backlog?atlOrigin=eyJpIjoiYjA5NTgyMzMxNjQ0NDZmOGI2OTliNTRhZWVjMjllNjUiLCJwIjoiaiJ9)
 
-### Entrega 02:
+  </ul>
+</details>
 
-- [Screen Cast](https://youtu.be/s6QeFdeu8u0)
+<details>
+<summary>Entrega 2</summary>
+<ul>
+
+- [Screen Cast - 3 Histórias](https://youtu.be/s6QeFdeu8u0)
 - [Website Azure Watts](https://watts---projeto-fds.azurewebsites.net/) 
 - [Quadro Jira](https://watts-projeto-fds.atlassian.net/jira/software/projects/KAN/boards/1?atlOrigin=eyJpIjoiMjA4MjU4ZGQ3NmZiNDI4NmE2NjllZjk5NTNmYzk1ODgiLCJwIjoiaiJ9)
 - [Backlog Jira](https://watts-projeto-fds.atlassian.net/jira/software/projects/KAN/boards/1/backlog?atlOrigin=eyJpIjoiYjA5NTgyMzMxNjQ0NDZmOGI2OTliNTRhZWVjMjllNjUiLCJwIjoiaiJ9)
+
+  </ul>
+</details>
+
+<details>
+<summary>Entrega 3</summary>
+<ul>
+
+- [Screen Cast - 3 novas Histórias](https://youtu.be/MlhGrBzM2N8)
+- [Screen Cast Cypress + CI/CD](https://youtu.be/tmkRkrWyXH4)
+- [Screen Cast Protótipo Low Fi](https://youtu.be/Jez8mqHcSTE)  
+- [Quadro Jira](https://watts-projeto-fds.atlassian.net/jira/software/projects/KAN/boards/1?atlOrigin=eyJpIjoiMjA4MjU4ZGQ3NmZiNDI4NmE2NjllZjk5NTNmYzk1ODgiLCJwIjoiaiJ9)
+- [Backlog Jira](https://watts-projeto-fds.atlassian.net/jira/software/projects/KAN/boards/1/backlog?atlOrigin=eyJpIjoiYjA5NTgyMzMxNjQ0NDZmOGI2OTliNTRhZWVjMjllNjUiLCJwIjoiaiJ9)
+
+  </ul>
+</details>
 
 <br>
 
@@ -48,6 +77,15 @@ Quadro Jira: ![Captura de Tela 2024-09-30 às 21 57 44](https://github.com/user
 
 Backlog Jira:![WhatsApp Image 2024-09-30 at 21 52 33](https://github.com/user-attachments/assets/6a62d79d-336f-4389-824b-5f22dbc5afe5)
 
+<br>
+<br>
+
+#### Prints Entrega 03:
+  
+Quadro Jira: ![Captura de Tela 2024-10-22 às 21 09 19](https://github.com/user-attachments/assets/a51b6415-31b7-48c3-821c-7e6ae921911c)
+
+
+
 
 
 
@@ -58,12 +96,12 @@ Backlog Jira:![WhatsApp Image 2024-09-30 at 21 52 33](https://github.com/user-at
 
 - **Antônio Paes** - <a href="mailto:ajpaj@cesar.school">📧</a> - <a href="https://www.linkedin.com/in/ant%C3%B4niopaess/"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" width="20"></a>
 - **Caio Almeida** - <a href="mailto:caa@cesar.school">📧</a> 
-- **Matheus Lucena** - <a href="mailto:mlh@cesar.school">📧</a> 
+- **Matheus Lucena** - <a href="mailto:mlh@cesar.school">📧</a> - <a href="https://www.linkedin.com/in/matheus-de-lucena-henriques-283098331/"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" width="20"></a>
 - **Marco Maciel** - <a href="mailto:magm@cesar.school">📧</a> - <a href="https://www.linkedin.com/in/marcomaciel2210/"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" width="20"></a>
 - **João Henrique** - <a href="mailto:jhrvo@cesar.school">📧</a> - <a href="https://www.linkedin.com/in/jo%C3%A3o-henrique-oliveira-585b91291/"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" width="20"></a>
 - **Galileu Calaça** - <a href="mailto:gcmm@cesar.school">📧</a> - <a href="https://www.linkedin.com/in/galileu-cala%C3%A7a-369726241/"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" width="20"></a>
 
-## Contribuintes
+## 🙋 Criado por:
 
 <div style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 10px;">
     <a href="https://github.com/AntonioPaess">

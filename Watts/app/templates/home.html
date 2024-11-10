@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 </head>
 <body>
     <h1>Locações</h1>
@@ -14,6 +15,11 @@
                 <form method="post" action="{% url 'deleteLocacao' locacao.id %}">
                     {% csrf_token %}
                     <button type="submit">Remover</button>
+                </form>
+                <form method="get" onsubmit="event.preventDefault(); calcularCustoLocacao(this, {{ locacao.id }});">
+                    <label for="horas">Horas:</label>
+                    <input type="number" id="horas" name="horas" min="1" required>
+                    <button type="submit">Calcular Custo</button>
                 </form>
             </li>
         {% endfor %}
@@ -29,6 +35,11 @@
                     {% csrf_token %}
                     <button type="submit">Remover</button>
                 </form>
+                <form method="get" onsubmit="event.preventDefault(); calcularCustoComodo(this, {{ comodo.id }});">
+                    <label for="horas">Horas:</label>
+                    <input type="number" id="horas" name="horas" min="1" required>
+                    <button type="submit">Calcular Custo</button>
+                </form>
             </li>
         {% endfor %}
     </ul>
@@ -38,14 +49,140 @@
     <ul>
         {% for ponto in pontosdeenergia %}
             <li>
-                {{ ponto.nome }} - {{ ponto.gastos }} kWh - {{ ponto.quantidade }} aparelhos
+                {{ ponto.nome }} - {{ ponto.comodo.nome }} - {{ ponto.locacao.nome }} - {{ ponto.gastos }} kWh - {{ ponto.quantidade }} aparelhos
                 <form method="post" action="{% url 'deletePontodeenergia' ponto.id %}">
                     {% csrf_token %}
                     <button type="submit">Remover</button>
+                </form>
+                <form method="get" onsubmit="event.preventDefault(); calcularCustoPonto(this, {{ ponto.id }});">
+                    <label for="horas">Horas:</label>
+                    <input type="number" id="horas" name="horas" min="1" required>
+                    <button type="submit">Calcular Custo</button>
                 </form>
             </li>
         {% endfor %}
     </ul>
     <a href="{% url 'addPontodeenergia' %}">Adicionar Ponto de Energia</a>
+
+    <!-- Modal para Custo do Ponto de Energia -->
+    <div class="modal fade" id="custoPontoModal" tabindex="-1" role="dialog" aria-labelledby="custoPontoModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="custoPontoModalLabel">Custo do Ponto de Energia</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p id="modalPonto"></p>
+                    <p id="modalGastos"></p>
+                    <p id="modalQuantidade"></p>
+                    <p id="modalComodo"></p>
+                    <p id="modalLocacao"></p>
+                    <p id="modalHoras"></p>
+                    <p id="modalCusto"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Custo do Cômodo -->
+    <div class="modal fade" id="custoComodoModal" tabindex="-1" role="dialog" aria-labelledby="custoComodoModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="custoComodoModalLabel">Custo do Cômodo</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p id="modalComodo"></p>
+                    <p id="modalHoras"></p>
+                    <p id="modalCustoComodo"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Custo da Locação -->
+    <div class="modal fade" id="custoLocacaoModal" tabindex="-1" role="dialog" aria-labelledby="custoLocacaoModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="custoLocacaoModalLabel">Custo da Locação</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p id="modalLocacao"></p>
+                    <p id="modalHorasLocacao"></p>
+                    <p id="modalCustoLocacao"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script>
+        function calcularCustoPonto(form, pontoId) {
+            const horas = form.horas.value;
+            const url = `/calcular_custo/${pontoId}/${horas}/`;
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('modalPonto').innerText = 'Ponto de Energia: ' + data.ponto.nome;
+                    document.getElementById('modalGastos').innerText = 'Gastos: ' + data.ponto.gastos + ' kWh';
+                    document.getElementById('modalQuantidade').innerText = 'Quantidade: ' + data.ponto.quantidade;
+                    document.getElementById('modalComodo').innerText = 'Cômodo: ' + data.ponto.comodo;
+                    document.getElementById('modalLocacao').innerText = 'Locação: ' + data.ponto.locacao;
+                    document.getElementById('modalHoras').innerText = 'Horas: ' + data.horas;
+                    document.getElementById('modalCusto').innerText = 'Custo: R$ ' + data.custo;
+                    $('#custoPontoModal').modal('show');
+                })
+                .catch(error => console.error('Error:', error));
+        }
+
+        function calcularCustoComodo(form, comodoId) {
+            const horas = form.horas.value;
+            const url = `/calcular_custo_comodo/${comodoId}/?horas=${horas}`;
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('modalComodo').innerText = 'Cômodo: ' + data.comodo;
+                    document.getElementById('modalHoras').innerText = 'Horas: ' + data.horas;
+                    document.getElementById('modalCustoComodo').innerText = 'Custo: R$ ' + data.custo;
+                    $('#custoComodoModal').modal('show');
+                })
+                .catch(error => console.error('Error:', error));
+        }
+
+        function calcularCustoLocacao(form, locacaoId) {
+            const horas = form.horas.value;
+            const url = `/calcular_custo_locacao/${locacaoId}/?horas=${horas}`;
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('modalLocacao').innerText = 'Locação: ' + data.locacao;
+                    document.getElementById('modalHorasLocacao').innerText = 'Horas: ' + data.horas;
+                    document.getElementById('modalCustoLocacao').innerText = 'Custo: R$ ' + data.custo;
+                    $('#custoLocacaoModal').modal('show');
+                })
+                .catch(error => console.error('Error:', error));
+        }
+    </script>
 </body>
 </html>

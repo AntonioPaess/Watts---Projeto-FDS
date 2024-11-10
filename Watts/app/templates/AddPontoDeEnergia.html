@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Ponto de Energia</title>
+</head>
+<body>
+    <h1>Adicionar Ponto de Energia</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="locacao">Locação:</label>
+        <select id="locacao" name="locacao" >
+            <option value="">Selecione uma locação</option>
+            {% for locacao in locacoes %}
+                <option value="{{ locacao.id }}">{{ locacao.nome }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <label for="comodo">Cômodo:</label>
+        <select id="comodo" name="comodo" >
+            <option value="">Selecione um cômodo</option>
+            {% for comodo in comodos %}
+                <option value="{{ comodo.id }}">{{ comodo.nome }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" >
+        {% if error_message == 'O campo nome é obrigatório' %}
+            <p style="color: red;">{{ error_message }}</p>
+        {% endif %}
+        <br>
+        <label for="gastos">Gastos:</label>
+        <input type="text" id="gastos" name="gastos" >
+        {% if error_message == 'O campo gastos é obrigatório' %}
+            <p style="color: red;">{{ error_message }}</p>
+        {% endif %}
+        {% if error_message == 'O campo gastos não pode ser negativo' %}
+            <p style="color: red;">{{ error_message }}</p>
+        {% endif %}
+        <br>
+        <label for="quantidade">Quantidade:</label>
+        <input type="number" id="quantidade" name="quantidade" >
+        {% if error_message == 'O campo quantidade é obrigatório' %}
+            <p style="color: red;">{{ error_message }}</p>
+        {% endif %}
+        {% if error_message == 'O campo quantidade não pode ser negativo' %}
+            <p style="color: red;">{{ error_message }}</p>
+        {% endif %}
+        {% if error_message == 'Cômodo não pertence à locação' %}
+            <p style="color: red;">{{ error_message }}</p>
+        {% endif %}
+        <br>
+        <button type="submit">Adicionar Ponto de Energia</button>
+    </form>
+</body>
+</html>

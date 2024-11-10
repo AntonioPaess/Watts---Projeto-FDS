@@ -10,14 +10,14 @@
     <form method="post">
         {% csrf_token %}
         <label for="nome">Nome:</label>
-        <input type="text" name="nome" id="nome">
+        <input type="text" id="nome" name="nome">
+        {% if name_error %}
+            <p style="color: red;">{{ name_error }}</p>
+        {% endif %}
         <br>
         <label for="estado">Estado:</label>
-        <select name="estado" id="estado">
-            <option value="AC">Acre</option>
-            <option value="AL">Alagoas</option>
-            <option value="AP">Amapá</option>
-            <option value="AM">Amazonas</option>
+        <select id="estado" name="estado">
+            <option value="">Selecione um estado</option>
             <option value="BA">Bahia</option>
             <option value="CE">Ceará</option>
             <option value="DF">Distrito Federal</option>
@@ -42,6 +42,9 @@
             <option value="SE">Sergipe</option>
             <option value="TO">Tocantins</option>
         </select>
+        {% if state_error %}
+            <p style="color: red;">{{ state_error }}</p>
+        {% endif %}
         <br>
         <button type="submit">Adicionar Locação</button>
     </form>

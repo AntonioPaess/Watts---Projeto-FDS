@@ -7,22 +7,28 @@
 </head>
 <body>
     <h1>Adicionar Cômodo</h1>
-    {% if error %}
-        <p style="color: red;">{{ error }}</p>
-    {% endif %}
     <form method="post">
         {% csrf_token %}
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" >
+        {% if error_message == 'O campo nome é obrigatório' %}
+            <p style="color: red;">{{ error_message }}</p>
+        {% endif %}
+        <br>
         <label for="locacao">Locação:</label>
-        <select name="locacao" id="locacao">
+        <select id="locacao" name="locacao" >
+            <option value="">Selecione uma locação</option>
             {% for locacao in locacoes %}
                 <option value="{{ locacao.id }}">{{ locacao.nome }}</option>
             {% endfor %}
         </select>
-        <br>
-        <label for="nome">Nome do Cômodo:</label>
-        <input type="text" name="nome" id="nome">
+        {% if error_message == 'O campo locação é obrigatório' %}
+            <p style="color: red;">{{ error_message }}</p>
+        {% endif %}
         <br>
         <button type="submit">Adicionar Cômodo</button>
     </form>
 </body>
 </html>
+
+
