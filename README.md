@@ -59,7 +59,20 @@
 
 - [Screen Cast - 3 novas Histórias](https://youtu.be/MlhGrBzM2N8)
 - [Screen Cast Cypress + CI/CD](https://youtu.be/tmkRkrWyXH4)
-- [Screen Cast Protótipo Low Fi](https://youtu.be/Jez8mqHcSTE)  
+- [Screen Cast Protótipo Lo-Fi](https://youtu.be/Jez8mqHcSTE)  
+- [Quadro Jira](https://watts-projeto-fds.atlassian.net/jira/software/projects/KAN/boards/1?atlOrigin=eyJpIjoiMjA4MjU4ZGQ3NmZiNDI4NmE2NjllZjk5NTNmYzk1ODgiLCJwIjoiaiJ9)
+- [Backlog Jira](https://watts-projeto-fds.atlassian.net/jira/software/projects/KAN/boards/1/backlog?atlOrigin=eyJpIjoiYjA5NTgyMzMxNjQ0NDZmOGI2OTliNTRhZWVjMjllNjUiLCJwIjoiaiJ9)
+
+  </ul>
+</details>
+
+<details>
+<summary>Entrega 4</summary>
+<ul>
+
+- [Screen Cast - 3 novas Histórias + Protótipo Lo-Fi](https://youtu.be/ENkfkX0s-OE)
+- [Screen Cast Cypress + CI/CD](https://youtu.be/jjCwkvEn5qg)
+- [Website Azure Watts](https://watts---projeto-fds.azurewebsites.net/) 
 - [Quadro Jira](https://watts-projeto-fds.atlassian.net/jira/software/projects/KAN/boards/1?atlOrigin=eyJpIjoiMjA4MjU4ZGQ3NmZiNDI4NmE2NjllZjk5NTNmYzk1ODgiLCJwIjoiaiJ9)
 - [Backlog Jira](https://watts-projeto-fds.atlassian.net/jira/software/projects/KAN/boards/1/backlog?atlOrigin=eyJpIjoiYjA5NTgyMzMxNjQ0NDZmOGI2OTliNTRhZWVjMjllNjUiLCJwIjoiaiJ9)
 
@@ -70,19 +83,46 @@
 
 #### Prints Entrega 02:
   
-Quadro Jira: ![Captura de Tela 2024-09-30 às 21 57 44](https://github.com/user-attachments/assets/e15cc330-29fd-4048-b747-5d9b4e0d1c65)
+Quadro Jira: 
+
+![Captura de Tela 2024-09-30 às 21 57 44](https://github.com/user-attachments/assets/e15cc330-29fd-4048-b747-5d9b4e0d1c65)
 
 <br>
 <br>
 
-Backlog Jira:![WhatsApp Image 2024-09-30 at 21 52 33](https://github.com/user-attachments/assets/6a62d79d-336f-4389-824b-5f22dbc5afe5)
+Backlog Jira:
+
+![WhatsApp Image 2024-09-30 at 21 52 33](https://github.com/user-attachments/assets/6a62d79d-336f-4389-824b-5f22dbc5afe5)
 
 <br>
 <br>
 
 #### Prints Entrega 03:
   
-Quadro Jira: ![Captura de Tela 2024-10-22 às 21 09 19](https://github.com/user-attachments/assets/a51b6415-31b7-48c3-821c-7e6ae921911c)
+Quadro Jira: 
+
+![Captura de Tela 2024-10-22 às 21 09 19](https://github.com/user-attachments/assets/a51b6415-31b7-48c3-821c-7e6ae921911c)
+
+<br>
+<br>
+
+#### Prints Entrega 04:
+  
+Quadro Jira: 
+
+<img width="1179" alt="Captura de Tela 2024-11-10 às 20 58 28" src="https://github.com/user-attachments/assets/ed95f78e-f7cd-4e34-818c-cc3f7aed2b2e">
+
+<br>
+
+Bug Tracking:
+
+<img width="1728" alt="Captura de Tela 2024-11-10 às 21 05 56" src="https://github.com/user-attachments/assets/fdc10b1d-4042-473b-abd2-8a7e5e287558">
+<br>
+<img width="1728" alt="Captura de Tela 2024-11-10 às 21 06 02" src="https://github.com/user-attachments/assets/99cd4303-edca-46fb-bec9-6a0caf6c6c40">
+<br>
+
+
+
 
 
 
